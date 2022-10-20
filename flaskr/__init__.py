@@ -25,8 +25,31 @@ def create_app(test_config=None):
         pass
 
     # a simple page that says hello
-    @app.route('/hello')
-    def hello():
-        return 'Hello, World!'
+    @app.route('/admin')
+    def admin():
+        return 'administration page'
+
+    @app.route('/login')
+    def login():  # put application's code here
+        return 'login page'
+
+    @app.route('/register')
+    def register():  # put application's code here
+        return 'new member page'
+
+    @app.route('/')
+    def index():  # put application's code here
+        return 'home page'
+
+    @app.route('/user/<username>')
+    def profile(username):  # put application's code here
+        return f'{username}\'s profile page'
+
+    @app.route('/search')
+    def search():  # put application's code here
+        return 'search page!'
+
+    from . import db
+    db.init_app(app)
 
     return app
