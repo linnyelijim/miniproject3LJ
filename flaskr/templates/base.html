@@ -1,9 +1,9 @@
 <!doctype html>
-<title>{% block title %}{% endblock %} Games&Brains</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+<title>{% block title %}{% endblock %} - Brains&Games</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <nav>
     <div class = "container text-center">
-  <h1>Games&Brains</h1>
+        <h1><span class="brains">Brains</span><span class="games">&Games</span></h1>
       <ul>
         {% if g.user %}
           <li><span>{{ g.user['username'] }}</span>
