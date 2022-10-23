@@ -13,7 +13,7 @@ bp = Blueprint('home', __name__, url_prefix='/home')
 def contact():
     return render_template('home/contact.html')
 
+
 @bp.route('/about')
 def about():
     return render_template('home/about.html')
-
