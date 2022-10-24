@@ -1,3 +1,7 @@
+# INF601 - Advanced Programming in Python
+# Lindsey Jimenez
+# Mini Project 3
+
 from setuptools import find_packages, setup
 
 setup(
