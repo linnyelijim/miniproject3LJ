@@ -4,35 +4,92 @@
     <h1>{% block title %}About Us{% endblock %}</h1>
 
 {% endblock %}
-<!--Creates accordian faq form-->
 {% block content %}
     <div>
         <p>
             Welcome to our About Us page! This is a place where board game enthusiasts can come together and discuss
             anything and everything to do with board games. While this is just a rough draft, per se, one day this site,
             with the help of everyone with any interest in board games, will be filled with a board game encyclopedia!
-            Here's
-            to the future!
+            Here's to the future!
+            <br>
+            <br>
+            <br>
+            <strong>Below is an example of a games page that is coming soon. Each tile will be linked to a page with
+                more information about each board game.</strong>
         </p>
     </div>
-    <h2>FAQ</h2>
+    <!--Creates photo tiles of games-->
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+            <div class="card">
+                <img src="https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__opengraph/img/d5aVUcak3R6QOHz5y-fvQdc8pwU=/fit-in/1200x630/filters:strip_icc()/pic4458123.jpg"
+                     class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">WingSpan</h5>
+                    <p class="card-text">Wingspan is a competitive, medium-weight, card-driven, engine-building board
+                        game from Stonemaier Games. You are bird enthusiasts—researchers, bird watchers, ornithologists,
+                        and collectors—seeking to discover and attract the best birds to your network of wildlife
+                        preserves.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="https://cf.geekdo-images.com/1COY3oeK9aN2_XNimKaNww__itemrep/img/cAOvicFEw8eQs6D9b2G4E7MTp00=/fit-in/246x300/filters:strip_icc()/pic3033330.jpg"
+                     class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Deception</h5>
+                    <p class="card-text">Deception: Set as a detective investigation scene, in Deception players find
+                        themselves in a scenario of intrigue and murder, deduction and deception. Players take on the
+                        roles of investigators attempting to solve a murder case, but one of the investigators is
+                        actually the killer.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZz21AJFzfrhecPm3erBSekWFTR6MQrbcpmA&usqp=CAU"
+                     class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Munchkin</h5>
+                    <p class="card-text">Munchkin is a dedicated deck card game by Steve Jackson Games, written by Steve
+                        Jackson and illustrated by John Kovalic. It is a humorous take on role-playing games, based on
+                        the concept of munchkins.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="https://external-preview.redd.it/RvsIWCQoP581zMjp11OYHUHY5T6qNZXazsPemGUjNFU.jpg?width=640&crop=smart&auto=webp&s=1c67e55b62758230716b839b93187bdb4e235b3c"
+                     class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Catan</h5>
+                    <p class="card-text">Catan, previously known as The Settlers of Catan or simply Settlers, is a
+                        multiplayer board game designed by Klaus Teuber. It was first published in 1995 in Germany by
+                        Franckh-Kosmos Verlag as Die Siedler von Catan.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Creates accordian faq form-->
+    <div class="faq">
+        <h2>FAQ</h2>
+    </div>
     <div class="accordion" id="faq">
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                        aria-expanded="true" aria-controls="collapseOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="false" aria-controls="collapseOne">
                     How do I contact Brains&Games about my account?
                 </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                 data-bs-parent="#accordionExample">
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
                 <div class="accordion-body">
                     <strong>Go to our <a href="contact.html">contact</a> page.</strong> There you will find a form that
-                    you
-                    can fill out with your name, your e-mail, the subject of your message, and a short description of
-                    the
-                    or concern. We will reach out to you in approximately 48 hours. Make sure to check your inbox and
-                    spam folder.
+                    you can fill out with your name, your e-mail, the subject of your message, and a short description
+                    of the or concern. We will reach out to you in approximately 48 hours. Make sure to check your inbox
+                    and spam folder.
                 </div>
             </div>
         </div>
@@ -43,12 +100,11 @@
                     How do I delete my post?
                 </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                 data-bs-parent="#accordionExample">
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
                 <div class="accordion-body">
                     <strong>Click on the <a href="index.html">BRAINS&GAMES</a> title.</strong> Once on the main blog
-                    page,
-                    you should be able to see all of your posts and the other user's posts. So long as you are signed in
+                    page, you should be able to see all of your posts and the other user's posts. So long as you are
+                    signed in
                     to your account, you should see an 'Edit' button located in the top right corner of your post.
                     Click,
                     'Edit', then scroll to the bottom of the screen. There, you should see a button to delete your
@@ -63,12 +119,11 @@
                     How do I create a post?
                 </button>
             </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                 data-bs-parent="#accordionExample">
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
                 <div class="accordion-body">
                     <strong>Click on the <a href="index.html">BRAINS&GAMES</a> title.</strong> First, ensure that you
-                    are
-                    logged into your account, otherwise you won't be able to post. Once logged in, follow your screen to
+                    are logged into your account, otherwise you won't be able to post. Once logged in, follow your
+                    screen to
                     the right of the word "Post" and you should see 'New'. Click 'New' and fill out the "Title" and
                     "Body"
                     section of your post. Finally, click save and your post will have posted. Return to the main page

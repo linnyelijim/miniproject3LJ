@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
+
 {% block header %}
     <h1>{% block title %}Contact Us{% endblock %}</h1>
 {% endblock %}
 {% block content %}
     <!--Creates a drop-down select bar-->
-    <select class="custom-select custom-select-sm" id="menu">
+    <label for="menu"></label>
+    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
         <option selected>Please select the reason for contacting us...</option>
         <option value="1">Account Issue</option>
         <option value="2">Login Issue</option>
@@ -12,14 +14,15 @@
         <option value="4">Blog Question/ Concern</option>
         <option value="5">Other</option>
     </select>
-    <!--Creates contact messaging form-->
+
+    <!--Creates contact us messaging form-->
     <form id="contact-form">
         <div class="form-group">
             <label for="name"></label>
             <input type="text" placeholder="Enter your full name..." class="form-control" id="name" required/>
         </div>
         <div class="form-group">
-            <label for="name"></label>
+            <label for="email"></label>
             <input type="text" placeholder="Enter your e-mail..." class="form-control" id="email"
                    aria-describedby="emailHelp" required/>
         </div>
@@ -27,10 +30,10 @@
             <label for="subject"></label>
             <input type="text" placeholder="Subject of message..." class="form-control" id="subject" required/>
         </div>
-        <div class="form-group">
-            <label for="message"></label>
-            <input type="text" placeholder="Enter message..." class="form-control form-control-lg" id="message"
-                   required/>
+        <div class="mb-3">
+            <label for="message" class="form-label"></label>
+            <textarea class="form-control" id="message" placeholder="Write your message..." required
+                      rows="3"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
