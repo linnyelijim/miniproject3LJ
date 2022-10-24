@@ -9,6 +9,7 @@ from flaskr.db import get_db
 bp = Blueprint('blog', __name__)
 
 
+# Routes the index page
 @bp.route('/')
 def index():
     db = get_db()
@@ -20,6 +21,7 @@ def index():
     return render_template('blog/index.html', posts=posts)
 
 
+# Routes the create page, creates form
 @bp.route('/create', methods=('GET', 'POST'))
 @login_required
 def create():
@@ -46,6 +48,7 @@ def create():
     return render_template('blog/create.html')
 
 
+# Retrieves post and authorizes user
 def get_post(id, check_author=True):
     post = get_db().execute(
         'SELECT p.id, title, body, created, author_id, username'
@@ -63,6 +66,7 @@ def get_post(id, check_author=True):
     return post
 
 
+# Routes the update page
 @bp.route('/<int:id>/update', methods=('GET', 'POST'))
 @login_required
 def update(id):
@@ -91,6 +95,7 @@ def update(id):
     return render_template('blog/update.html', post=post)
 
 
+# Routes/ allows for user to delete post
 @bp.route('/<int:id>/delete', methods=('POST',))
 @login_required
 def delete(id):

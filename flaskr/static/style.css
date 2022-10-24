@@ -57,9 +57,9 @@ a:hover::before {
 }
 
 p {
-    color: wheat;
-    margin-bottom: 4rem;
-    margin-top: 2rem;
+    color: #674810;
+    margin-bottom: 3rem;
+    margin-top: 0.5rem;
     font-size: 20px;
 }
 
@@ -78,7 +78,15 @@ nav h1 {
     flex: auto;
     margin: auto 30%;
 }
-
+.action {
+    background-image: linear-gradient(
+            to right,
+            #aba11b,
+            rgba(197, 151, 54, 0.85) 50%,
+            #c58401 50%
+    );
+    color: #7c6957;
+}
 .brains {
     font-weight: 100;
     font-size: 65px;
@@ -135,18 +143,25 @@ nav ul li a, nav ul li span, header .action {
     margin: 1rem 0 0.25rem 0;
     color: #ebcea8;
 }
-
+.content p {
+    color: #ebcea8;
+}
 .flash {
     margin: 1em 0;
     padding: 1em;
     background: #cae6f6;
     border: 1px solid #377ba8;
 }
-
+.post {
+    margin-top: 1rem;
+    background-color: #fefefe;
+    border: solid #7c6957;
+}
 .post > header {
     display: flex;
     align-items: flex-end;
     font-size: 0.85em;
+    background-color: #f8f1d9;
 }
 
 .post > header > div:first-of-type {
@@ -154,17 +169,23 @@ nav ul li a, nav ul li span, header .action {
 }
 
 .post > header h1 {
-    font-size: 1.5em;
+    padding-left: 1rem;
+    font-size: 2.5em;
     margin-bottom: 0;
+    color: #43300a;
+    font-variant: all-small-caps;
 }
 
 .post .about {
+    padding-left: 1rem;
     color: slategray;
     font-style: italic;
 }
 
 .post .body {
+    padding-left: 1rem;
     white-space: pre-line;
+
 }
 
 .content:last-child {
@@ -269,4 +290,12 @@ color: #42372c;
     color: #7c6957;
     border: solid #f8f1d9;
 }
-
+.card-body p {
+    color: #3c2904;
+    background-color: rgba(124, 105, 87, 0.09);
+    padding: 1rem;
+    font-size: 15px;
+}
+.faq h2 {
+    padding-top: 4rem;
+}
